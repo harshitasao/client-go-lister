@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  creationTimestamp: null
+  labels: 
+    app: client-go-lister
+  name: client-go-lister
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-go-lister
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels: 
+        app: client-go-lister
+    spec:
+      containers:
+      - image: harshita09sao/client-go-lister:0.1.1
+        name: client-go-lister
+        resources: {}
+status: {}
